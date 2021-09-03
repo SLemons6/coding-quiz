@@ -52,7 +52,7 @@ function resetTimer() {
     if (timerInterval) {
         clearInterval(timerInterval);
     }
-    timerInterval = setInterval(function () {
+    timerInterval = setInterval(function() {
         timeLeft--;
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
@@ -63,7 +63,7 @@ function resetTimer() {
     }, 1000);
 }
 
-startButton.addEventListener('click', function (event) {
+startButton.addEventListener('click', function(event) {
     event.preventDefault();
     intro.style.display = "none";
     formQuiz.style.display = "block";
@@ -71,13 +71,13 @@ startButton.addEventListener('click', function (event) {
     resetTimer();
 });
 
-viewHighScores.addEventListener('click', function (event) {
+viewHighScores.addEventListener('click', function(event) {
     event.preventDefault();
     highScoreOverlay.style.display = "block";
     clearInterval(timerInterval);
 });
 
-returnButton.addEventListener('click', function (event) {
+returnButton.addEventListener('click', function(event) {
     event.preventDefault();
     highScoreOverlay.style.display = "none";
     resetTimer();
@@ -86,8 +86,7 @@ returnButton.addEventListener('click', function (event) {
 
 
 // Array of questions for quiz
-var questions = [
-    {
+var questions = [{
         question: "How do you display an alert box with the words \"Coding Quiz\"?",
         answers: {
             1: "displayBox(\"Coding Quiz\")",
@@ -141,28 +140,28 @@ var questions = [
 
 function displayQuestion() {
     formQuestion.textContent = questions[currentQuestion].question;
-    answer1.textContent = questions[currentQuestion].answers[1];
-    answer2.textContent = questions[currentQuestion].answers[2];
-    answer3.textContent = questions[currentQuestion].answers[3];
-    answer4.textContent = questions[currentQuestion].answers[4];
+    answer1.textContent = " 1. " + questions[currentQuestion].answers[1];
+    answer2.textContent = " 2. " + questions[currentQuestion].answers[2];
+    answer3.textContent = " 3. " + questions[currentQuestion].answers[3];
+    answer4.textContent = " 4. " + questions[currentQuestion].answers[4];
 };
 
-answer1.addEventListener('click', function (event) {
+answer1.addEventListener('click', function(event) {
     event.preventDefault();
     showResult(1);
 });
 
-answer2.addEventListener('click', function (event) {
+answer2.addEventListener('click', function(event) {
     event.preventDefault();
     showResult(2);
 });
 
-answer3.addEventListener('click', function (event) {
+answer3.addEventListener('click', function(event) {
     event.preventDefault();
     showResult(3);
 });
 
-answer4.addEventListener('click', function (event) {
+answer4.addEventListener('click', function(event) {
     event.preventDefault();
     showResult(4);
 });
@@ -177,7 +176,7 @@ function showResult(answer) {
         timeLeft -= 10;
         timer.textContent = "Time: " + timeLeft;
     }
-    setTimeout(function () {
+    setTimeout(function() {
         result.style.display = "none";
         currentQuestion++;
         if (currentQuestion >= questions.length) {
@@ -186,8 +185,7 @@ function showResult(answer) {
         } else {
             displayQuestion();
         }
-    }, 3000
-    );
+    }, 3000);
 }
 
 function resetQuiz() {
@@ -212,11 +210,11 @@ function renderHighScores() {
     }
 }
 
-submitInitials.addEventListener('click', function (event) {
+submitInitials.addEventListener('click', function(event) {
     event.preventDefault();
     var name = initials.value;
     highScores.push({ name: name, score: score });
-    highScores.sort(function (a, b) {
+    highScores.sort(function(a, b) {
         if (a.score < b.score) {
             return 1;
         } else if (a.score > b.score) {
@@ -236,5 +234,3 @@ submitInitials.addEventListener('click', function (event) {
 
 
 // start quiz
-
-
