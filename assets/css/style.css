@@ -1,13 +1,42 @@
+/* universal page styles */
+
 * {
     box-sizing: content-box;
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+button {
+    display: inline-block;
+    color: white;
+    align-content: center;
+    background-color: red;
+    width: fit-content;
+    height: 30px;
+    align-content: center;
+    text-align: center;
+    font-size: 16px;
+    padding: 0px 10px;
+    border-radius: 4px;
+    margin: 10px;
+}
+
 h1 {
     font-size: 40px;
     font-weight: bold;
 }
+
+li {
+    width: 100px;
+    background-color: lightcoral;
+    color: black;
+}
+
+
+/* page styles end */
+
+
+/* header style */
 
 header {
     display: flex;
@@ -26,20 +55,8 @@ header a {
     padding: 15px;
 }
 
-button {
-    display: inline-block;
-    color: white;
-    align-content: center;
-    background-color: red;
-    width: fit-content;
-    height: 30px;
-    align-content: center;
-    text-align: center;
-    font-size: 16px;
-    padding: 0px 10px;
-    border-radius: 4px;
-    margin: 10px;
-}
+
+/* main section style */
 
 main {
     display: flex;
@@ -52,11 +69,23 @@ main p {
     font-size: 20px;
 }
 
+
+/* main style end */
+
+
+/* intro style */
+
 #intro {
     margin: auto;
     width: 50%;
     padding: 10px;
 }
+
+
+/* intro style end */
+
+
+/* quiz section style */
 
 #form-quiz {
     padding: 5px;
@@ -70,6 +99,13 @@ main p {
 }
 
 #form-quiz p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-top: 5px gray;
+}
+
+#form-quiz p {
     font-size: 26px;
     font-weight: bold;
 }
@@ -80,12 +116,11 @@ main p {
     margin: 10px auto;
 }
 
-#form-quiz p {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    border-top: 5px gray;
-}
+
+/* quiz section style end */
+
+
+/* quiz result section style */
 
 #quiz-result {
     margin: auto;
@@ -97,11 +132,11 @@ main p {
     width: 30px;
 }
 
-li {
-    width: 100px;
-    background-color: lightcoral;
-    color: black;
-}
+
+/* quiz result section style end */
+
+
+/* high scores style */
 
 #high-score {
     position: fixed;
@@ -112,3 +147,6 @@ li {
     z-index: 9999;
     background-color: white;
 }
+
+
+/* high score style end */
