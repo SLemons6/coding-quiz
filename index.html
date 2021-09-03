@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,42 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Coding Quiz!</title>
 </head>
+
 <body>
+    <header>
+        <a id="view-highscores" href="#">View High Scores</a>
+        <span id="timer"> Time: 90 </span>
+    </header>
+    <main>
+        <div id="intro">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following coding related questions
+                within the time limit. Keep in mind that incorrectly
+                answered questions will penalize your time/score by ten seconds.
+            </p>
+            <button id="start">Start Quiz</button>
+        </div>
+        <section id="form-quiz" hidden>
+            <p id="form-question"></p>
+            <button class="answer" id="submit-answer1"></button>
+            <button class="answer" id="submit-answer2"></button>
+            <button class="answer" id="submit-answer3"></button>
+            <button class="answer" id="submit-answer4"></button>
+            <p id="result" hidden></p>
+        </section>
+        <section id="quiz-result" hidden>
+            <h1>All Done!</h1>
+            <p>Your Final Score Is: <span id="score"></span></p>
+            <label for="initials">Enter Your Initials</label>
+            <input type="text" id="initials"><button id="submit-initials">Submit</button>
+        </section>
+        <div id="high-score" hidden>
+            <h1>High Scores!</h1>
+            <ol id="highscore-list"></ol>
+            <button id="return">Return</button><button id="clear-scores">Clear High Scores</button>
+        </div>
+    </main>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
