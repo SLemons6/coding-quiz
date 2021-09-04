@@ -7,10 +7,12 @@ A web application that runs a timed multiple choice quiz to test one's coding kn
 * HTML
 * CSS 
 * JavaScript 
-* Web APIs
 
 ## Website
 https://slemons6.github.io/coding-quiz
+
+<img src="./assets/images/coding-quiz screenshot.jpg" 
+alt ="Screenshot of Coding Quiz website" />
 
 ## Contribution
 Made by Shayne Lemons
